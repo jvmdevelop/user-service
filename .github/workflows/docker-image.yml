@@ -18,7 +18,7 @@ jobs:
         uses: docker/setup-compose-action@v1.2.0
 
       - name: Build and run containers
-        run: docker-compose up --build -d
+        run: docker compose up --build -d
 
       - name: Show running containers
         run: docker ps
