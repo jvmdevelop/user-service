@@ -17,6 +17,12 @@ jobs:
       - name: Set up Docker Compose
         uses: docker/setup-compose-action@v1.2.0
 
+      - name: Maven Set up
+        uses: hb0730/maven-action@v1.0.2
+        
+      - name: Maven builds
+        run: mvn clean package
+      
       - name: Build and run containers
         run: docker compose up --build -d
 
